@@ -36,12 +36,9 @@
             
         </header>
         <?php
-            #echo "<h1>TANGINA</h1>";
-            $d = $_SESSION['full_name'];
-            #echo "$d";
-            echo "<h1 style='text-align: center; margin-top: 200px'> WELCOME USER! - " . $d . "</h1>";
+            //$d = $_SESSION['full_name'];
+            echo "<h1 style='text-align: center; margin-top: 200px'> WELCOME USER! -  $_SESSION[full_name]  </h1>";
             echo "<img src='twerkingsus.gif' style='display: block; margin-left: auto; margin-right: auto; width: 500px'/>";
-            echo "<img src='uploads/$_SESSION[id_image_dir]' style='display: block; margin-left: auto; margin-right: auto; margin-bottom: 20px; width: 500px'/>";
         ?>  
     </body>
     

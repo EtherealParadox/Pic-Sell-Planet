@@ -80,14 +80,18 @@ if(isset($_POST['register']))
                 if($result_fetch['username']==$_POST['username'])
                 {
                     #error if username is already taken
-                        $_SESSION['alr_username']=true;
-                        $_SESSION['functioncall']="'register-popup'";
-                        $_SESSION['functioncall2']="'alr-user'";
-                        header("location: index.php");
+                    $_SESSION['alr_username']=true;
+                    $_SESSION['functioncall']="'register-popup'";
+                    $_SESSION['functioncall2']="'alr-user'";
+                    header("location: index.php");
                 }
                 else
                 {
                     #error if email is already registered
+                    $_SESSION['alr-email']=true;
+                    $_SESSION['functioncall']="'register-popup'";
+                    $_SESSION['functioncall2']="'alr-email'";
+                    header("location: index.php");
                     echo "
                         <script>
                             alert('$result_fetch[email] - E-mail already registered');
